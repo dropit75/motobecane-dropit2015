@@ -1,4 +1,4 @@
-<div class="container-full jumbo-intro" data-stellar-background-ratio="0">
+<div class="container-fluid jumbo-intro" data-stellar-background-ratio="0">
 <div class="container">
 <div class="row">
 <div class="col-sm-6 col-md-5 col-md-offset-1">

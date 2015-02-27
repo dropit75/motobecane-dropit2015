@@ -1,4 +1,4 @@
-<div class="container-full jumbo-store jumbo-full" id="store">
+<div class="container-fluid jumbo-store" id="store">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">

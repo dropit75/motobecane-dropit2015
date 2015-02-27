@@ -1,6 +1,4 @@
-<!-- <div class="container-full jumbo-instagram jumbo-full" id="instagram" data-stellar-background-ratio="0">
- -->
-<div class="container-full jumbo-instagram jumbo-full" id="instagram">
+<div class="container-fluid jumbo-instagram" id="instagram">
  	<div class="container">
 		<div class="row">
 			<div class="col-md-12 col-sm-12">

@@ -84,7 +84,7 @@
 </div>
 </div>
 
-<div class="container-full jumbo-order jumbo-full">
+<div class="container-full jumbo-order">
 
 
 <!-- <div class="progress-step">
