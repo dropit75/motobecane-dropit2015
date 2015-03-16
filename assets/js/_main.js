@@ -24,6 +24,9 @@ var Roots = {
     init: function() {
       // JavaScript to be fired on all pages
 
+      // steller header
+      $('.page').stellar();
+
       // Side mene drower
        $.slidebars();
 
@@ -82,23 +85,24 @@ var Roots = {
       }
     }
   },
+
   // Home page
   home: {
     init: function() {
       // JavaScript to be fired on the home page
       $('.home').stellar();
 
-      //jQuery to collapse the navbar on scroll
-      $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      // //jQuery to collapse the navbar on scroll
+      // $(".navbar-fixed-top").removeClass("top-nav-collapse");
  
-      $(window).scroll(function() {
+      // $(window).scroll(function() {
  
-          if ($(".navbar").offset().top > 50) {
-              $(".navbar-fixed-top").addClass("top-nav-collapse");
-          } else {
-              $(".navbar-fixed-top").removeClass("top-nav-collapse");
-          }
-      });
+      //     if ($(".navbar").offset().top > 50) {
+      //         $(".navbar-fixed-top").addClass("top-nav-collapse");
+      //     } else {
+      //         $(".navbar-fixed-top").removeClass("top-nav-collapse");
+      //     }
+      // });
 
 
 
@@ -445,12 +449,7 @@ var Roots = {
             'shipping_first_name':{validators:{notEmpty:{message: 'The First name is required'}}},
             'shipping_last_name':{validators:{notEmpty:{enabled:false}}},
             'shipping_address_1': {validators:{notEmpty:{message:'The adress is required'}}},
-            'shipping_address_2':{validators:{notEmpty:{enabled:false}}},
-            'shipping_pickup_company':{validators:{notEmpty:{enabled:false}}},
-            'shipping_pickup_first_name':{validators:{notEmpty:{message: 'The First name is required'}}},
-            'shipping_pickup_last_name':{validators:{notEmpty:{enabled:false}}},
-            'shipping_pickup_address_1': {validators:{notEmpty:{message:'The adress is required'}}},
-            'shipping_pickup_address_2':{validators:{notEmpty:{enabled:false}}}
+            'shipping_address_2':{validators:{notEmpty:{enabled:false}}}
           }
         });
       };
@@ -610,7 +609,7 @@ var Roots = {
           // alert('$loggedIn');
             // var loggedIn = printf('<?php echo is_user_logged_in(); ?>');
           addInputClass();
-          makeCheckoutCarousel();
+          // makeCheckoutCarousel();
           initCheckoutValidation();
           smoothScroll();
 

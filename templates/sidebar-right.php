@@ -1,4 +1,4 @@
-<div class="sb-slidebar sb-right sb-style-push ">
+<div class="sb-slidebar sb-right sb-style-overlay ">
   <ul>
     <li><a href="#">List 1</a></li>
     <li class="active"><a href="#">List 2</a></li>

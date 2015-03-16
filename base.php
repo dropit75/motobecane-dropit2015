@@ -34,8 +34,7 @@
       }
     ?>
 
-<?php get_template_part('templates/sidebar-left'); ?>
-<?php get_template_part('templates/sidebar-right'); ?>
+
 
   <main id="sb-site" role="main" name="page-top">
 
@@ -48,7 +47,8 @@
       ?>
 
   </main>
-
+  <?php get_template_part('templates/sidebar-left'); ?>
+  <?php get_template_part('templates/sidebar-right'); ?>
   <?php  if (roots_display_sidebar()) : ?>
     <aside class="sidebar <?php echo roots_sidebar_class(); ?>" role="complementary">
       <?php include roots_sidebar_path(); ?>

@@ -188,6 +188,8 @@ remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_r
 //
 
 
+
+
 // login form
 
 
@@ -301,79 +303,79 @@ function custom_override_checkout_fields( $fields ) {
 	// unset($fields['billing']['billing_email']);
 	// unset($fields['billing']['billing_phone']);
 
-	// remove city name
-	unset($fields['billing']['billing_city']);
+	// // remove city name
+	// unset($fields['billing']['billing_city']);
 	
-	// remove postal code
-	unset($fields['billing']['billing_postcode']);
+	// // remove postal code
+	// unset($fields['billing']['billing_postcode']);
 
-	// remove country
-	unset($fields['billing']['billing_country']);
+	// // remove country
+	// unset($fields['billing']['billing_country']);
 
 
 
-	// change first name field
-	$fields['billing']['billing_first_name'] = array(
-		'label'     => __('Votre Prénom *', 'woocommerce'),
-		'placeholder'   => _x('Votre Prénom *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change first name field
+	// $fields['billing']['billing_first_name'] = array(
+	// 	'label'     => __('Votre Prénom *', 'woocommerce'),
+	// 	'placeholder'   => _x('Votre Prénom *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change last name field
-	$fields['billing']['billing_last_name'] = array(
-		'label'     => __('Votre Nom *', 'woocommerce'),
-		'placeholder'   => _x('Votre Nom *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change last name field
+	// $fields['billing']['billing_last_name'] = array(
+	// 	'label'     => __('Votre Nom *', 'woocommerce'),
+	// 	'placeholder'   => _x('Votre Nom *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change campany name field
-	$fields['billing']['billing_company'] = array(
-		'label'     => __('Nom de l\'entreprise', 'woocommerce'),
-		'placeholder'   => _x('Nom de l\'entreprise', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change campany name field
+	// $fields['billing']['billing_company'] = array(
+	// 	'label'     => __('Nom de l\'entreprise', 'woocommerce'),
+	// 	'placeholder'   => _x('Nom de l\'entreprise', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change phone field
-	$fields['billing']['billing_phone'] = array(
-		'label'     => __('Téléphone ', 'woocommerce'),
-		'placeholder'   => _x('Téléphone ', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change phone field
+	// $fields['billing']['billing_phone'] = array(
+	// 	'label'     => __('Téléphone ', 'woocommerce'),
+	// 	'placeholder'   => _x('Téléphone ', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change address1 field
-	$fields['billing']['billing_address_1'] = array(
-		'label'     => __('Adresse#1 *', 'woocommerce'),
-		'placeholder'   => _x('Adress *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change address1 field
+	// $fields['billing']['billing_address_1'] = array(
+	// 	'label'     => __('Adresse#1 *', 'woocommerce'),
+	// 	'placeholder'   => _x('Adress *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change adress2 field
-	$fields['billing']['billing_address_2'] = array(
-		'label'     => __('Adresse#2', 'woocommerce'),
-		'placeholder'   => _x('Précisez code / escalier / etage', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change adress2 field
+	// $fields['billing']['billing_address_2'] = array(
+	// 	'label'     => __('Adresse#2', 'woocommerce'),
+	// 	'placeholder'   => _x('Précisez code / escalier / etage', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
-	// change email field
-	$fields['billing']['billing_email'] = array(
-		'label'     => __('Adresse email *', 'woocommerce'),
-		'placeholder'   => _x('Adresse email *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group'),
-		'clear'     => true
-	);
+	// // change email field
+	// $fields['billing']['billing_email'] = array(
+	// 	'label'     => __('Adresse email *', 'woocommerce'),
+	// 	'placeholder'   => _x('Adresse email *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
 
 
@@ -396,108 +398,108 @@ function custom_override_checkout_fields( $fields ) {
 	// unset($fields['shipping']['shipping_last_name']);
 
 	// remove city name
-	unset($fields['shipping']['shipping_city']);
+	// unset($fields['shipping']['shipping_city']);
 	
-	// remove postal code
-	unset($fields['shipping']['shipping_postcode']);
+	// // remove postal code
+	// unset($fields['shipping']['shipping_postcode']);
 
-	// remove country
-	unset($fields['shipping']['shipping_country']);
+	// // remove country
+	// unset($fields['shipping']['shipping_country']);
 	
-	// remove email
-	unset($fields['shipping']['shipping_email']);
+	// // remove email
+	// unset($fields['shipping']['shipping_email']);
 
 
-	// change campany name field
-	$fields['shipping']['shipping_company'] = array(
-		'label'     => __('Company name', 'woocommerce'),
-		'placeholder'   => _x('Company name', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
+	// // change campany name field
+	// $fields['shipping']['shipping_company'] = array(
+	// 	'label'     => __('Company name', 'woocommerce'),
+	// 	'placeholder'   => _x('Company name', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
 
-	// change address1 field
-	$fields['shipping']['shipping_address_1'] = array(
-		'label'     => __('Adresse#1', 'woocommerce'),
-		'placeholder'   => _x('Adresse *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
+	// // change address1 field
+	// $fields['shipping']['shipping_address_1'] = array(
+	// 	'label'     => __('Adresse#1', 'woocommerce'),
+	// 	'placeholder'   => _x('Adresse *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
 
-	// change first name field
-	$fields['shipping']['shipping_first_name'] = array(
-		'label'     => __('Name', 'woocommerce'),
-		'placeholder'   => _x('Name *', 'placeholder', 'woocommerce'),
-		'required'  => true,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
+	// // change first name field
+	// $fields['shipping']['shipping_first_name'] = array(
+	// 	'label'     => __('Name', 'woocommerce'),
+	// 	'placeholder'   => _x('Name *', 'placeholder', 'woocommerce'),
+	// 	'required'  => true,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
 
-	// change last name field
-	$fields['shipping']['shipping_last_name'] = array(
-		'label'     => __('Last Name', 'woocommerce'),
-		'placeholder'   => _x('Last Name', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group hide')
-	);
+	// // change last name field
+	// $fields['shipping']['shipping_last_name'] = array(
+	// 	'label'     => __('Last Name', 'woocommerce'),
+	// 	'placeholder'   => _x('Last Name', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group hide')
+	// );
+
+	// // change adress2 field
+	// $fields['shipping']['shipping_address_2'] = array(
+	// 	'label'     => __('Adresse#2', 'woocommerce'),
+	// 	'placeholder'   => _x('Précisez code / escalier / etage', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
+
+
+	// // add Pickup name in Pickup field
+	// $fields['shipping']['shipping_pickup_first_name'] = array(
+	// 	'label'     => __('First name', 'woocommerce'),
+	// 	'placeholder'   => _x('First name', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
+
+	// // add Pickup name in Pickup field
+	// $fields['shipping']['shipping_pickup_last_name'] = array(
+	// 	'label'     => __('Last name', 'woocommerce'),
+	// 	'placeholder'   => _x('Last name', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group hide')
+	// );
+
+	// // add Pickup name in Pickup field
+	// $fields['shipping']['shipping_pickup_company'] = array(
+	// 	'label'     => __('Company name', 'woocommerce'),
+	// 	'placeholder'   => _x('Company name', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
+
+	// // add Pickup name in Pickup field
+	// $fields['shipping']['shipping_pickup_address_1'] = array(
+	// 	'label'     => __('Adresse#1', 'woocommerce'),
+	// 	'placeholder'   => _x('Adresse#1', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
+
+	// // add Pickup name in Pickup field
+	// $fields['shipping']['shipping_pickup_address_2'] = array(
+	// 	'label'     => __('Adresse#2', 'woocommerce'),
+	// 	'placeholder'   => _x('Adresse#2', 'placeholder', 'woocommerce'),
+	// 	'required'  => false,
+	// 	'class'     => array('col-sm-6 dropform form-group')
+	// );
+
 
 	// change adress2 field
-	$fields['shipping']['shipping_address_2'] = array(
-		'label'     => __('Adresse#2', 'woocommerce'),
-		'placeholder'   => _x('Précisez code / escalier / etage', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
-
-
-	// add Pickup name in Pickup field
-	$fields['shipping']['shipping_pickup_first_name'] = array(
-		'label'     => __('First name', 'woocommerce'),
-		'placeholder'   => _x('First name', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
-
-	// add Pickup name in Pickup field
-	$fields['shipping']['shipping_pickup_last_name'] = array(
-		'label'     => __('Last name', 'woocommerce'),
-		'placeholder'   => _x('Last name', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group hide')
-	);
-
-	// add Pickup name in Pickup field
-	$fields['shipping']['shipping_pickup_company'] = array(
-		'label'     => __('Company name', 'woocommerce'),
-		'placeholder'   => _x('Company name', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
-
-	// add Pickup name in Pickup field
-	$fields['shipping']['shipping_pickup_address_1'] = array(
-		'label'     => __('Adresse#1', 'woocommerce'),
-		'placeholder'   => _x('Adresse#1', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
-
-	// add Pickup name in Pickup field
-	$fields['shipping']['shipping_pickup_address_2'] = array(
-		'label'     => __('Adresse#2', 'woocommerce'),
-		'placeholder'   => _x('Adresse#2', 'placeholder', 'woocommerce'),
-		'required'  => false,
-		'class'     => array('col-sm-6 dropform form-group')
-	);
-
-
-	// change adress2 field
-	$fields['order']['order_comments'] = array(
-		'label'     => __('', 'woocommerce'),
-		'placeholder'   => _x('Anything else ?', 'placeholder', 'woocommerce'),
-		'type' => 'textarea',
-		'class'     => array('col-xs-12 dropform form-group'),
-		'clear'     => true
-	);
+	// $fields['order']['order_comments'] = array(
+	// 	'label'     => __('', 'woocommerce'),
+	// 	'placeholder'   => _x('Anything else ?', 'placeholder', 'woocommerce'),
+	// 	'type' => 'textarea',
+	// 	'class'     => array('col-xs-12 dropform form-group'),
+	// 	'clear'     => true
+	// );
 
 
 	// change password field
@@ -510,21 +512,36 @@ function custom_override_checkout_fields( $fields ) {
 }
 
 
+/**
+ * Display field value on the order edition page
+ **/
+
+// add_action( 'woocommerce_admin_order_data_after_shipping_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+
+// function my_custom_checkout_field_display_admin_order_meta($order){
+//     echo '<h4>'.__('Pickup Details').'</h4>';
+//     echo '<p><strong>'.__('Address').': </strong><br />';
+//     echo $order->shipping_pickup_first_name .'<br />';
+//     echo $order->shipping_pickup_company .'<br />';
+//     echo $order->shipping_pickup_address_1 .'<br />';
+//     echo $order->shipping_pickup_address_2 .'</p>';
+
+// }
+
 
 
 // /**
 //  * Add the field to the checkout
 //  */
-
 // add_action( 'woocommerce_before_checkout_pickup_form', 'my_custom_checkout_field' ); 
-	// function my_custom_checkout_field( $checkout ) {
-	// 	echo 'testtet';
-	// }
+// function my_custom_checkout_field( $checkout ) {
+// 	// echo 'testtet';
+// }
+
 // /**
 //  * Process the checkout
 //  */
 // add_action('woocommerce_checkout_process', 'my_custom_checkout_field_process');
-
 // function my_custom_checkout_field_process() {
 //     // Check if set, if its not set add an error.
 //     if ( ! $_POST['my_field_name'] )
@@ -535,7 +552,6 @@ function custom_override_checkout_fields( $fields ) {
 //  * Update the order meta with field value
 //  */
 // add_action( 'woocommerce_checkout_update_order_meta', 'my_custom_checkout_field_update_order_meta' );
-
 // function my_custom_checkout_field_update_order_meta( $order_id ) {
 //     if ( ! empty( $_POST['my_field_name'] ) ) {
 //         update_post_meta( $order_id, 'My Field', sanitize_text_field( $_POST['my_field_name'] ) );
@@ -544,20 +560,8 @@ function custom_override_checkout_fields( $fields ) {
 
 
 
-/**
- * Display field value on the order edition page
- **/
-add_action( 'woocommerce_admin_order_data_after_shipping_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
-function my_custom_checkout_field_display_admin_order_meta($order){
-    echo '<h4>'.__('Pickup Details').'</h4>';
-    echo '<p><strong>'.__('Address').': </strong><br />';
-    echo $order->shipping_pickup_first_name .'<br />';
-    echo $order->shipping_pickup_company .'<br />';
-    echo $order->shipping_pickup_address_1 .'<br />';
-    echo $order->shipping_pickup_address_2 .'</p>';
 
-}
 
 
 /**

@@ -43,9 +43,12 @@ global $product;
 
 
 								 $rPrice = $product->get_regular_price();
-								 intval($dPrice);
+								 intval($rPrice);
 								 $dRate = get_discount_price() * 100;
 								 intval($dRate);
+								 $dPrice = do_shortcode("[wgp_show_discount]");
+								 intval($dPrice);
+								 
 
 							 ?>
 							<?php echo $product->get_price_html(); ?><span class="tva"> TVA</span></p>
@@ -54,6 +57,7 @@ global $product;
 							<link itemprop="availability" href="http://schema.org/<?php echo $product->is_in_stock() ? 'InStock' : 'OutOfStock'; ?>" />
 						</div>
 						<div class="option-s">
+						<?php echo do_shortcode("[wgp_show_discount]"); ?>
 							<ul>
 								<?php if ( is_user_logged_in() && $dRate > 0 ): ?>
 									<li>Discount <span><?php echo $dRate ?>%</span> applied from reguler price <span><?php echo $rPrice ?> euro.</span> </li>
