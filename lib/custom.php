@@ -516,17 +516,20 @@ function custom_override_checkout_fields( $fields ) {
  * Display field value on the order edition page
  **/
 
-// add_action( 'woocommerce_admin_order_data_after_shipping_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
+add_action( 'woocommerce_admin_order_data_after_shipping_address', 'my_custom_checkout_field_display_admin_order_meta', 10, 1 );
 
-// function my_custom_checkout_field_display_admin_order_meta($order){
-//     echo '<h4>'.__('Pickup Details').'</h4>';
-//     echo '<p><strong>'.__('Address').': </strong><br />';
-//     echo $order->shipping_pickup_first_name .'<br />';
-//     echo $order->shipping_pickup_company .'<br />';
-//     echo $order->shipping_pickup_address_1 .'<br />';
-//     echo $order->shipping_pickup_address_2 .'</p>';
+function my_custom_checkout_field_display_admin_order_meta($order){
 
-// }
+
+    echo '<h4>'.__('Pickup Details').'</h4>';
+    echo '<p><strong>'.__('Address').': </strong><br />';
+    echo get_post_meta($order->id,'shipping_pickup_company',true) .'<br />';
+    echo get_post_meta($order->id,'shipping_pickup_first_name',true) .'<br />';
+    echo get_post_meta($order->id,'shipping_pickup_phone',true) .'<br />';
+    echo get_post_meta($order->id,'shipping_pickup_address_1',true) .', '.get_post_meta($order->id,'shipping_pickup_postcode',true).'<br />';
+    echo get_post_meta($order->id,'shipping_pickup_address_2',true);
+
+}
 
 
 
@@ -567,11 +570,11 @@ function custom_override_checkout_fields( $fields ) {
 /**
  * Add pickup fields in carousel
  */
-add_action( 'woocommerce_checkout_pickup', 'checkout_form_pickup' );
+// add_action( 'woocommerce_checkout_pickup', 'checkout_form_pickup' );
 
-function checkout_form_pickup() {
-	wc_get_template( 'checkout/form-pickup.php', array( 'checkout' => $this ) );
-}
+// function checkout_form_pickup() {
+// 	wc_get_template( 'checkout/form-pickup.php', array( 'checkout' => $this ) );
+// }
 
 
 // PASS WORD COMFIRM

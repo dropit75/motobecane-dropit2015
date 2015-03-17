@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php endif; ?>
 
-<!-- 
+
 	<?php do_action( 'woocommerce_before_order_notes', $checkout ); ?>
 
 	<?php if ( apply_filters( 'woocommerce_enable_order_notes_field', get_option( 'woocommerce_enable_order_comments', 'yes' ) === 'yes' ) ) : ?>
@@ -59,7 +59,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_after_order_notes', $checkout ); ?>
- -->
 
 
 	<div class="form-row place-order">
