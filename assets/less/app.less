@@ -607,7 +607,7 @@ body {
         font-size: 10px;
         white-space: nowrap;
         @media (min-width: @screen-sm-min) {
-           font-weight: 100;
+           // font-weight: 100;
            // font-size: 12px;
         }
         @media (min-width: @screen-md-min) {
@@ -629,7 +629,7 @@ body {
           margin: 8px auto;
           padding: 4px;
           border-radius: 3px;
-          font-weight: 100;
+          // font-weight: 100;
 
           @media (min-width: @screen-sm-min) {
             color: @drop-white;
@@ -641,7 +641,7 @@ body {
             margin: 8px auto;
             padding: 4px;
             border-radius: 3px;
-            font-weight: 100;
+            // font-weight: 100;
           }
           @media (min-width: @screen-md-min) {
 
@@ -660,7 +660,8 @@ body {
 
         span{
           background-color: @drop-orange;
-          font-weight: 300;
+          // font-weight: 300;
+
         }
       }
 
@@ -699,6 +700,10 @@ body {
 
       #billing-block,
       #pickup-block,
+      #shipping-block,
+      #payment-block,
+      #memo-block,
+      #submit-block,
       #payment-memo-block{
          h3{
             margin-top: 0;
@@ -737,7 +742,7 @@ body {
             p{
                font-size: 14px;
                line-height: 1.2em;
-               font-weight: 100;
+               // font-weight: 100;
 
                @media (min-width: @screen-sm-min) {
                   font-size: 14px;
@@ -818,7 +823,7 @@ body {
    // }
 
    h1{
-      font-weight: 100;
+      // font-weight: 100;
       text-transform: uppercase;
    }
 
@@ -933,7 +938,7 @@ body {
       font-size: 14px;
       @media (min-width: @screen-sm-min) {
         font-size: 14px;
-        font-weight: 100;
+        // font-weight: 100;
       }
       @media (min-width: @screen-md-min) {
         font-size: 16px;
@@ -998,7 +1003,7 @@ body {
       @media (min-width: @screen-sm-min) {
          font-size: 32px;
          letter-spacing: 0.1em;
-         font-weight: 100;
+         // font-weight: 100;
 
       }
       @media (min-width: @screen-md-min) {
@@ -1038,11 +1043,16 @@ body {
    }
    
    textarea{
+
       .form-control();
       .make-md-column(12);
       height:80px;
       // rows: 3;
       // width: 100%;
+   }
+
+   .input-text{
+        .form-control();
    }
 
 
@@ -1256,7 +1266,7 @@ body {
 
    @media (min-width: @screen-sm-min) {
       padding: 100px 0;
-      font-weight: 100;
+      // font-weight: 100;
    }
    @media (min-width: @screen-md-min) {
       padding: 150px 0;
@@ -1286,7 +1296,7 @@ body {
       letter-spacing: 0.03em;
 
       @media (min-width: @screen-sm-min) {
-         font-weight: 100;
+         // font-weight: 100;
          font-size: 28px;
          margin: 10px 0;
       }
@@ -1371,7 +1381,7 @@ body {
 
       @media (min-width: @screen-sm-min) {
          font-size: 32px;
-         font-weight: 100;
+         // font-weight: 100;
       }
       @media (min-width: @screen-md-min) {
          font-size: 36px;
@@ -1437,7 +1447,7 @@ body {
 
       @media (min-width: @screen-sm-min) {
          font-size: 20px;
-         font-weight: 100;
+         // font-weight: 100;
          margin: 20px 0 10px 0;
       }
       @media (min-width: @screen-md-min) {
@@ -1454,7 +1464,7 @@ body {
       font-weight: 300;
       letter-spacing: 0.05em;
       @media (min-width: @screen-sm-min) {
-         font-weight: 100;
+         // font-weight: 100;
          
       }
    }

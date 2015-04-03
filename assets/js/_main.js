@@ -349,8 +349,17 @@ var Roots = {
       };
 
 
+
       var selectProduct = function(){
         var langD ;
+
+        // if(cLang === 'fr'){
+        //   langD = '/';
+        // } else if (cLang === 'en'){
+        //   langD = '/en/';
+        // } else if (cLang === 'ja'){
+        //   langD = '/ja/';
+        // }
 
         if(cLang === 'en'){
           langD = '/';
@@ -409,7 +418,7 @@ var Roots = {
         $owl = $(".checkout-carousel").owlCarousel({
           items:1,
           mouseDrag:true,
-          touchDrag:false,
+          touchDrag:true,
           autoHeight : true,
           center:false,
           margin:0,
@@ -479,6 +488,7 @@ var Roots = {
       };
 
       var checkoutGotoPayment = function(){
+        // alert("hello");
         $(location).attr('href', '#checkout-payment');
         refreshOwl();
       };
@@ -490,14 +500,14 @@ var Roots = {
       };
 
       var checkoutGotoPaymentNoCheck = function(){
-        // alert("hello");
          $('#ship-to-different-address-checkbox').prop('checked', false);
          $(location).attr('href', '#checkout-payment');
          refreshOwl();
       };
 
       var checkoutGotoMemo = function(){
-        $(location).attr('href', '#checkout-memo');
+        alert(this);
+        // $(location).attr('href', '#checkout-memo');
         refreshOwl();
       };
 
@@ -510,7 +520,7 @@ var Roots = {
         // alert($('#pickup-to-different-address-checkbox').prop('checked'));
 
         togglePickupAddressForm();
-        // pickupValid();
+        pickupValid();
         clearPickupForm();
       };
 
@@ -573,6 +583,9 @@ var Roots = {
       var selectPaymentBacs = function(){
         $( '#payment_method_bacs' ).prop('checked', true);
       };
+      var selectPaymentPaypal = function(){
+        $( '#payment_method_paypal' ).prop('checked', true);
+      };
 
       var billingValid = function(){
         if( $('#billing-next-btn').attr('disabled') === 'disabled' && $('#billing_first_name_field').hasClass('has-success') &&$('#billing_last_name_field').hasClass('has-success') && $('#billing_address_1_field').hasClass('has-success') && $('#billing_email_field').hasClass('has-success') && $('#account_password_field').hasClass('has-success') ){
@@ -602,14 +615,15 @@ var Roots = {
         return false;
       };
 
+
       var initCheckoutForm = function(){
 
           $(location).attr('href', '#checkout-billing');
 
           // alert('$loggedIn');
             // var loggedIn = printf('<?php echo is_user_logged_in(); ?>');
-          addInputClass();
-          // makeCheckoutCarousel();
+          // addInputClass();
+          makeCheckoutCarousel();
           initCheckoutValidation();
           smoothScroll();
 
@@ -617,8 +631,11 @@ var Roots = {
 
       initCheckoutForm();
 
+
+
+
       //test
-      $('#test-btn').click(refreshOwl);
+      $('#test-btn').click(checkoutGotoMemo);
       $('.btn-back').click(backCheckoutCarousel);
 
       // facture
@@ -645,7 +662,9 @@ var Roots = {
       $('#payment-btn-cod').click(selectPaymentCod);
       $('#payment-btn-cheque').click(selectPaymentCheque);
       $('#payment-btn-bacs').click(selectPaymentBacs);
-      $('#payment-block .btn-checkout').click(checkoutGotoMemo);
+      $('#payment-btn-paypal').click(selectPaymentPaypal);
+      // $('#payment-block .btn-checkout').click(checkoutGotoMemo);
+      // $('.payment-next-btn').click(checkoutGotoMemo);
       $('#payment-back-btn').click(checkoutGotoPickup);
 
       // memo

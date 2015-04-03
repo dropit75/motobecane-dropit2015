@@ -7,8 +7,6 @@
  * @version     2.2.7
  */
 
-// edited by wai
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
@@ -16,9 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php wc_print_notices(); ?>
-
-<!-- header menu import -->
-<?php get_template_part('templates/member', 'menu'); ?>
 
 <form action="" method="post">
 
@@ -32,6 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<label for="account_last_name"><?php _e( 'Last name', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="text" class="input-text" name="account_last_name" id="account_last_name" value="<?php echo esc_attr( $user->last_name ); ?>" />
 	</p>
+	<div class="clear"></div>
+
 	<p class="form-row form-row-wide">
 		<label for="account_email"><?php _e( 'Email address', 'woocommerce' ); ?> <span class="required">*</span></label>
 		<input type="email" class="input-text" name="account_email" id="account_email" value="<?php echo esc_attr( $user->user_email ); ?>" />

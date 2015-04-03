@@ -7,15 +7,11 @@
  * @version     2.0.0
  */
 
-// edited by wai
-
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit; // Exit if accessed directly
 }
 
 wc_print_notices(); ?>
-
-<?php get_template_part('templates/member', 'menu'); ?>
 
 <div class="container-full jumbo-myaccount">
 	<div class="container">
@@ -26,10 +22,7 @@ wc_print_notices(); ?>
 					printf(
 						__( 'Hello <strong>%1$s</strong> (not %1$s? <a href="%2$s">Sign out</a>).', 'woocommerce' ) . ' ',
 						$current_user->display_name,
-						// wp_logout_url( home_url() )
-						// wp_logout_url( get_permalink( get_option('woocommerce_myaccount_page_id')) )
-						wp_logout_url( get_permalink( wc_get_page_id( 'myaccount' ) ) )
-
+						wc_get_endpoint_url( 'customer-logout', '', wc_get_page_permalink( 'myaccount' ) )
 					);
 
 					printf( __( 'From your account dashboard you can view your recent orders, manage your shipping and billing addresses and <a href="%s">edit your password and account details</a>.', 'woocommerce' ),

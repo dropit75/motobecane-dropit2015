@@ -13,7 +13,7 @@ function load_google_fonts() {
 	*/
 	// wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Pathway+Gothic+One');
 	// wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Raleway:100,700,900');
-	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:100,300,900');
+	wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Lato:300,400,900');
 	wp_enqueue_style( 'googleFonts');
 }
 
@@ -666,3 +666,10 @@ require_once ( get_stylesheet_directory() . '/theme-options.php' );
 // 	return $fields;
 // }
 
+
+
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 10 );
+remove_action( 'woocommerce_checkout_order_review', 'woocommerce_checkout_payment', 20 );
+
+// add_action( 'woocommerce_checkout_order_review', 'woocommerce_order_review', 5 );
+add_action( 'woocommerce_checkout_peymentselect', 'woocommerce_checkout_payment', 7 );
